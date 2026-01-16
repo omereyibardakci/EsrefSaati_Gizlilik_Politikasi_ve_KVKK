@@ -3,591 +3,226 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Eşref Saati — Gizlilik Politikası ve KVKK</title>
+  <title>Eşref Saati — Gizlilik Politikası & KVKK</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
   <style>
-    /* === Renkler / Temel === */
     :root{
-      --bg: #000000;
-      --box-bg: #111111;
-      --text: #FFFFFF;
-      --muted: #AAAAAA;
-      --accent: #F90606;
-      --accent-glow: #FF4D4D;
-      --border-dark: #333333;
+      --bg:#000;
+      --box-bg:#111;
+      --text:#fff;
+      --muted:#aaa;
+      --accent:#F90606;
+      --accent-glow:#FF4D4D;
+      --border-dark:#333;
     }
 
-    /* === Global === */
     html,body{
-      height:100%;
       margin:0;
       padding:0;
-      background-color: var(--bg);
-      color: var(--text);
-      font-family: "Roboto", sans-serif;
-      line-height: 1.8;
-      padding: 40px 20px;
-      box-sizing: border-box;
+      background:var(--bg);
+      color:var(--text);
+      font-family:Roboto,sans-serif;
+      line-height:1.8;
+      padding:40px 20px;
+      box-sizing:border-box;
     }
 
     .container{
       max-width:900px;
       margin:0 auto;
-      padding: 0 10px;
     }
 
-    /* === Headings === */
     h1{
-      color: var(--accent);
-      font-size: 2.0rem;
-      margin: 0 0 12px 0;
-      text-shadow: 0 0 10px var(--accent);
-      padding-bottom: 10px;
-      border-bottom: 2px solid var(--accent);
-      text-align: center;
-      line-height: 1.3;
+      color:var(--accent);
+      text-align:center;
+      font-size:2rem;
+      text-shadow:0 0 10px var(--accent);
+      border-bottom:2px solid var(--accent);
+      padding-bottom:10px;
     }
 
     h2{
-      color: var(--accent);
-      font-size: 1.5rem;
-      margin-top: 50px;
-      margin-bottom: 15px;
-      text-shadow: 0 0 8px var(--accent);
-      text-transform: uppercase;
-      border-bottom: 1px solid #222;
-      padding-bottom: 5px;
+      color:var(--accent);
+      margin-top:50px;
+      text-transform:uppercase;
+      border-bottom:1px solid #222;
+      padding-bottom:5px;
     }
 
     h3{
-      color: var(--accent-glow);
-      font-size: 1.15rem;
-      margin-top: 30px;
-      margin-bottom: 10px;
-      font-weight: 500;
+      color:var(--accent-glow);
+      margin-top:30px;
+      font-weight:500;
     }
 
-    p{
-      color: var(--text);
-      font-size: 1.05rem;
-      margin: 15px 0;
-    }
+    p{ font-size:1.05rem; }
 
-    ul {
-      padding-left: 20px;
-      margin: 10px 0 20px 0;
-    }
+    ul{ padding-left:20px; }
 
-    li { 
-        margin-bottom: 8px;
-        color: #e0e0e0;
-    }
+    li{ margin-bottom:8px; color:#e0e0e0; }
 
-    /* Linkler */
-    a {
-      color: var(--accent);
-      text-decoration: none;
-      transition: all 0.3s ease;
-      word-break: break-all; /* Uzun linklerin taşmasını engeller */
+    a{
+      color:var(--accent);
+      text-decoration:none;
     }
-    a:hover {
-      color: var(--accent-glow);
-      text-shadow: 0 0 6px var(--accent-glow);
-    }
-
-    /* Developer box */
-    .dev-box{
-      margin-top: 50px;
-      background: var(--box-bg);
-      border: 1px solid var(--accent);
-      border-radius: 8px;
-      padding: 25px;
-      box-shadow: 0 0 15px rgba(249,6,6,0.2);
+    a:hover{
+      color:var(--accent-glow);
+      text-shadow:0 0 6px var(--accent-glow);
     }
 
     .meta{
-      color: var(--muted);
-      font-size: .95rem;
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    /* Footer */
-    footer{
-      margin-top: 60px;
-      padding-top: 20px;
-      border-top: 1px solid var(--border-dark);
-      color: #666;
-      font-size: 0.9rem;
       text-align:center;
+      color:var(--muted);
+      margin-bottom:40px;
     }
 
-    /* Responsive */
-    @media (max-width:600px){
-      h1{ font-size:1.6rem; }
-      h2{ font-size:1.3rem; }
-      .container { padding: 0 5px; }
+    .dev-box{
+      margin-top:50px;
+      background:var(--box-bg);
+      border:1px solid var(--accent);
+      border-radius:8px;
+      padding:25px;
+      box-shadow:0 0 15px rgba(249,6,6,.2);
+    }
+
+    footer{
+      margin-top:60px;
+      padding-top:20px;
+      border-top:1px solid var(--border-dark);
+      text-align:center;
+      color:#666;
+      font-size:.9rem;
+    }
+
+    @media(max-width:600px){
+      h1{font-size:1.6rem;}
     }
   </style>
 </head>
+
 <body>
-  <div class="container">
-
-    <header>
-      <h1>KVKK AYDINLATMA METNİ<br><span style="font-size: 0.7em; color: #fff; text-shadow:none;">(GİZLİLİK POLİTİKASI)</span></h1>
-      <p class="meta"><strong>Son Güncelleme:</strong> 23.11.2025</p>
-    </header>
-
-    <main>
-
-      <h2>1. VERİ SORUMLUSU</h2>
-      <h3>Kişisel Verilerinizi Kim Topluyor?</h3>
-      <p>
-        <strong>Eşref Saati</strong> uygulaması, <strong>Ömer Eyibardakçı</strong> tarafından işletilmektedir, adres: <strong>Gaziantep/Türkiye</strong>. Kişisel verilerinizin toplanması, işlenmesi ve korunmasından sorumlu veri sorumlusu biziz.
-      </p>
-      <p><strong>İletişim Bilgileri:</strong><br>
-      E-posta: <a href="mailto:esrefsaatiapp@gmail.com">esrefsaatiapp@gmail.com</a></p>
-
-      <h2>2. TOPLANAN VERİLER</h2>
-      <p>Aşağıdaki kategorilerde kişisel veri topluyoruz:</p>
-
-      <h3>2.1 Hesap ve Kayıt Verileri</h3>
-      <ul>
-        <li><strong>Ad ve Soyad:</strong> Adınız ve soyadınız</li>
-        <li><strong>E-posta Adresi:</strong> Hesap kimlik doğrulama ve iletişim için kullanılır</li>
-        <li><strong>Şifre:</strong> Firebase Authentication aracılığıyla güvenli şekilde şifrelenmiş olarak saklanır (okunabilir formda saklanmaz)</li>
-        <li><strong>Telefon Numarası:</strong> İsteğe bağlı iletişim bilgisi</li>
-        <li><strong>Yaş:</strong> Yaşınız (13 yaş ve üzeri olmalıdır)</li>
-        <li><strong>Cinsiyet:</strong> Cinsiyet kimliğiniz</li>
-        <li><strong>Firebase Kullanıcı ID'si (UID):</strong> Firebase Authentication tarafından atanan benzersiz tanımlayıcı</li>
-      </ul>
-
-      <h3>2.2 Genişletilmiş Profil Verileri (İsteğe Bağlı)</h3>
-      <ul>
-        <li><strong>Burç:</strong> Astrolojik burç</li>
-        <li><strong>Yükselen:</strong> Astrolojik yükselen</li>
-        <li><strong>Doğum Saati:</strong> Doğum saatiniz</li>
-        <li><strong>İlişki Durumu:</strong> Mevcut ilişki durumunuz</li>
-        <li><strong>Doğum Yeri:</strong> Doğum şehri veya konumu</li>
-        <li><strong>Element:</strong> Astrolojik element</li>
-        <li><strong>Hesap Zaman Damgaları:</strong> Hesap oluşturma ve son güncelleme tarih ve saati</li>
-      </ul>
-
-      <h3>2.3 Geri Sayım Verileri</h3>
-      <ul>
-        <li><strong>Bitiş Zamanı:</strong> Geri sayımın biteceği Unix zaman damgası</li>
-        <li><strong>Aktif Durum:</strong> Geri sayımın şu anda aktif olup olmadığı</li>
-        <li><strong>Geri Sayım Zaman Damgaları:</strong> Geri sayımların oluşturulma ve güncellenme zamanları</li>
-        <li><strong>Sunucu Zaman Damgaları:</strong> Senkronizasyon için sunucu tarafı zaman damgaları</li>
-      </ul>
-
-      <h3>2.4 Satın Alma ve İşlem Verileri</h3>
-      <ul>
-        <li><strong>Satın Alma Token'ı:</strong> Uygulama içi satın almalar için benzersiz tanımlayıcı</li>
-        <li><strong>Sipariş ID'si:</strong> Google Play sipariş tanımlayıcısı</li>
-        <li><strong>Satın Alma Zamanı:</strong> Satın alma zaman damgası</li>
-        <li><strong>Satın Alma Süresi:</strong> Premium satın almalarla ilişkili süre</li>
-      </ul>
-
-      <h3>2.5 Cihaz ve Teknik Verileri</h3>
-      <ul>
-        <li><strong>Cihaz Bilgileri:</strong> Cihaz tanımlayıcıları, işletim sistemi sürümü, cihaz modeli</li>
-        <li><strong>Uygulama Kullanım Verileri:</strong> Uygulama ile nasıl etkileşim kurduğunuz (Firebase Analytics tarafından otomatik toplanır)</li>
-        <li><strong>IP Adresi:</strong> Güvenlik ve analitik amaçlarla otomatik olarak toplanır</li>
-        <li><strong>Reklam ID'si:</strong> AdMob tarafından kullanılan cihaz reklam tanımlayıcısı</li>
-      </ul>
-
-      <h3>2.6 Bildirim Verileri</h3>
-      <ul>
-        <li><strong>Bildirim Tercihleri:</strong> Bildirim ayarlarınız ve izinleriniz</li>
-        <li><strong>Zamanlanmış Bildirim Zamanları:</strong> Bildirimlerin gönderileceği zamanlar</li>
-      </ul>
-
-      <h2>3. VERİLERİNİZİN İŞLENME AMAÇLARI</h2>
-      <p>Kişisel verilerinizi aşağıdaki amaçlarla işliyoruz:</p>
-
-      <h3>3.1 Hizmet Sunumu</h3>
-      <ul>
-        <li><strong>Hesap Yönetimi:</strong> Kullanıcı hesabınızın oluşturulması ve sürdürülmesi</li>
-        <li><strong>Kimlik Doğrulama:</strong> Giriş yaptığınızda kimliğinizin doğrulanması</li>
-        <li><strong>Geri Sayım İşlevselliği:</strong> Geri sayım zamanlayıcı hizmetleri ve cihazlar arası senkronizasyon sağlanması</li>
-        <li><strong>Premium Özellikler:</strong> Satın aldığınız premium özelliklerin etkinleştirilmesi ve yönetilmesi</li>
-      </ul>
-
-      <h3>3.2 İletişim</h3>
-      <ul>
-        <li><strong>Hizmet Güncellemeleri:</strong> Hesabınız veya Uygulama hakkında önemli bilgilerin gönderilmesi</li>
-        <li><strong>Destek:</strong> Sorularınıza yanıt verilmesi ve müşteri desteği sağlanması</li>
-      </ul>
-
-      <h3>3.3 Uygulama İyileştirme</h3>
-      <ul>
-        <li><strong>Analitik:</strong> Kullanıcıların Uygulama ile nasıl etkileşim kurduğunu anlayarak işlevselliği iyileştirme</li>
-        <li><strong>Hata Düzeltmeleri:</strong> Teknik sorunların belirlenmesi ve çözülmesi</li>
-        <li><strong>Özellik Geliştirme:</strong> Kullanım kalıplarına dayalı yeni özellikler geliştirme</li>
-      </ul>
-
-      <h3>3.4 Yasal Uyumluluk</h3>
-      <ul>
-        <li><strong>Yasal Yükümlülükler:</strong> Geçerli yasa ve düzenlemelere uyum</li>
-        <li><strong>Dolandırıcılık Önleme:</strong> Dolandırıcılık faaliyetlerinin tespit edilmesi ve önlenmesi</li>
-        <li><strong>Güvenlik:</strong> Uygulama ve kullanıcıları güvenlik tehditlerinden koruma</li>
-      </ul>
-
-      <h3>3.5 Reklamcılık</h3>
-      <ul>
-        <li><strong>Kişiselleştirilmiş Reklamlar:</strong> Google AdMob aracılığıyla ilgili reklamların gösterilmesi</li>
-        <li><strong>Reklam Performansı:</strong> Reklam etkinliğinin ölçülmesi</li>
-      </ul>
-
-      <h2>4. VERİ İŞLEME HUKUKİ SEBEPLERİ</h2>
-      <p>Kişisel verilerinizi aşağıdaki hukuki sebeplere dayanarak işliyoruz:</p>
-      <ul>
-        <li><strong>Açık Rıza:</strong> Açık rıza verdiğinizde (ör. isteğe bağlı profil verileri için)</li>
-        <li><strong>Sözleşmenin İfası:</strong> Talep ettiğiniz hizmetleri sağlamak için (hesap oluşturma, geri sayım işlevselliği)</li>
-        <li><strong>Meşru Menfaatler:</strong> Analitik, güvenlik ve uygulama iyileştirme için</li>
-        <li><strong>Yasal Yükümlülük:</strong> Geçerli yasa ve düzenlemelere uymak için</li>
-      </ul>
-
-      <h2>5. VERİ PAYLAŞIMI VE ÜÇÜNCÜ TARAFLAR</h2>
-      <p>Verilerinizi aşağıdaki üçüncü taraf hizmet sağlayıcılarla paylaşıyoruz:</p>
-
-      <h3>5.1 Google Firebase Hizmetleri</h3>
-      <ul>
-        <li><strong>Firebase Authentication:</strong> Kullanıcı kimlik doğrulama ve şifre depolama işlemlerini yönetir</li>
-        <li><strong>Cloud Firestore:</strong> Profil verilerinizi ve geri sayım bilgilerinizi saklar</li>
-        <li><strong>Firebase Analytics:</strong> Kullanım analitik verilerini toplar</li>
-        <li><strong>Veri Konumu:</strong> Firebase verileri, ülkenizin dışında bulunabilecek Google Cloud sunucularında saklanır</li>
-        <li><strong>Google Gizlilik Politikası:</strong> <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
-      </ul>
-
-      <h3>5.2 Google AdMob</h3>
-      <ul>
-        <li><strong>Amaç:</strong> Uygulamada reklam gösterilmesi</li>
-        <li><strong>Paylaşılan Veriler:</strong> Cihaz reklam ID'si, uygulama kullanım verileri, yaklaşık konum</li>
-        <li><strong>Veri Konumu:</strong> Ülkenizin dışında bulunabilecek Google sunucuları</li>
-        <li><strong>AdMob Gizlilik Politikası:</strong> <a href="https://support.google.com/admob/answer/6128543">https://support.google.com/admob/answer/6128543</a></li>
-      </ul>
-
-      <h3>5.3 Google Play Faturalandırma</h3>
-      <ul>
-        <li><strong>Amaç:</strong> Uygulama içi satın almaların işlenmesi</li>
-        <li><strong>Paylaşılan Veriler:</strong> Satın alma bilgileri, hesap tanımlayıcıları</li>
-        <li><strong>Veri Konumu:</strong> Google sunucuları</li>
-        <li><strong>Google Play Şartları:</strong> <a href="https://policies.google.com/terms">https://policies.google.com/terms</a></li>
-      </ul>
-
-      <h3>5.4 Veri Paylaşım Kısıtlamaları</h3>
-      <ul>
-        <li>Kişisel verilerinizi üçüncü taraflara satmıyoruz</li>
-        <li>Rızanız olmadan verilerinizi üçüncü tarafların pazarlama amaçları için paylaşmıyoruz</li>
-        <li>Yalnızca Uygulamanın çalışması için gerekli verileri paylaşıyoruz</li>
-        <li>Tüm üçüncü taraf hizmet sağlayıcıları verilerinizi korumakla sözleşmeyle yükümlüdür</li>
-      </ul>
-
-      <h2>6. YURT DIŞINA VERİ AKTARIMI (KRİTİK MADDE)</h2>
-      <h3>Yurtdışına Veri Aktarımı Hakkında Önemli Bilgilendirme</h3>
-      <p>Kişisel verileriniz, aşağıdakiler dahil olmak üzere ikamet ettiğiniz ülkenin dışındaki ülkelere aktarılmakta ve işlenmektedir:</p>
-      <ul>
-        <li><strong>Amerika Birleşik Devletleri:</strong> Google (Firebase, AdMob, Google Play) sunucularını Amerika Birleşik Devletleri'nde işletmektedir</li>
-        <li><strong>Avrupa Birliği:</strong> Bazı Firebase verileri AB bölgelerinde saklanabilir</li>
-        <li><strong>Diğer Ülkeler:</strong> Google, faaliyet gösterdiği diğer ülkelerde veri işleyebilir</li>
-      </ul>
-
-      <h3>6.1 Aktarım Mekanizmaları</h3>
-      <ul>
-        <li><strong>Standart Sözleşme Hükümleri:</strong> Google, Avrupa Komisyonu tarafından onaylanmış Standart Sözleşme Hükümlerini kullanır</li>
-        <li><strong>Yeterlilik Kararları:</strong> Bazı aktarımlar yeterlilik kararı olan ülkelere yapılır</li>
-        <li><strong>Google'ın Veri İşleme Şartları:</strong> Google, geçerli gizlilik yasalarına uygun olarak verileri korumayı taahhüt eder</li>
-      </ul>
-
-      <h3>6.2 Aktarımlarla İlgili Haklarınız</h3>
-      <ul>
-        <li>Uluslararası aktarımlar hakkında bilgilendirilme hakkınız vardır</li>
-        <li>Rızanızı geri çekebilirsiniz, ancak bu Uygulama işlevselliğini etkileyebilir</li>
-        <li>Belirli aktarım mekanizmaları hakkında bilgi talep edebilirsiniz</li>
-      </ul>
-
-      <h3>6.3 KVKK Açısından Yurtdışına Aktarım</h3>
-      <p>6698 sayılı Kişisel Verilerin Korunması Kanunu uyarınca:</p>
-      <ul>
-        <li>Kişisel verilerinizin yurtdışına aktarılması için açık rızanız gereklidir</li>
-        <li>Bu Uygulamayı kullanarak, verilerinizin yurtdışına aktarılmasına açık rıza vermiş sayılırsınız</li>
-        <li>Rızanızı istediğiniz zaman geri çekebilirsiniz, ancak bu durumda Uygulamayı kullanamayabilirsiniz</li>
-      </ul>
-
-      <h2>7. VERİ SAKLAMA SÜRELERİ</h2>
-      <p>Kişisel verilerinizi aşağıdaki süreler boyunca saklıyoruz:</p>
-
-      <h3>7.1 Hesap Verileri</h3>
-      <ul>
-        <li><strong>Aktif Hesaplar:</strong> Hesabınız aktif olduğu sürece saklanır</li>
-        <li><strong>Silinen Hesaplar:</strong> Hesap silme talebinizden itibaren 30 gün içinde silinir, ancak:
-          <ul>
-            <li>Yasa gereği gerekli veriler (ör. vergi amaçlı satın alma kayıtları): 7 yıla kadar</li>
-            <li>Yasal iddialar için gerekli veriler: İddialar çözülene kadar</li>
-          </ul>
-        </li>
-      </ul>
-
-      <h3>7.2 Geri Sayım Verileri</h3>
-      <ul>
-        <li><strong>Aktif Geri Sayımlar:</strong> Geri sayım aktif olduğu sürece saklanır</li>
-        <li><strong>Pasif Geri Sayımlar:</strong> Pasif hale geldikten sonra 1 yıl saklanır, ardından silinir</li>
-        <li><strong>Hesap Silme Üzerine:</strong> 30 gün içinde silinir</li>
-      </ul>
-
-      <h3>7.3 Satın Alma Verileri</h3>
-      <ul>
-        <li><strong>İşlem Kayıtları:</strong> 7 yıl saklanır (mali kayıtlar için yasal gereklilik)</li>
-        <li><strong>Satın Alma Token'ları:</strong> Satın almadan sonra 1 yıl saklanır</li>
-      </ul>
-
-      <h3>7.4 Analitik Veriler</h3>
-      <ul>
-        <li><strong>Firebase Analytics:</strong> Google'ın saklama politikalarına göre saklanır (genellikle 14 ay)</li>
-        <li><strong>Toplu Veriler:</strong> Anonimleştirilmiş formda süresiz olarak saklanabilir</li>
-      </ul>
-
-      <h3>7.5 Otomatik Silme</h3>
-      <ul>
-        <li>Hesap silme üzerine, çoğu kişisel veri 30 gün içinde otomatik olarak silinir</li>
-        <li>Bazı veriler yasa gereği veya meşru iş amaçları için daha uzun süre saklanabilir</li>
-      </ul>
-
-      <h2>8. HAKLARINIZ (KVKK VE GDPR)</h2>
-      <p>Kişisel verilerinizle ilgili aşağıdaki haklara sahipsiniz:</p>
-      
-      <h3>8.1 Bilgi Alma Hakkı</h3>
-      <ul>
-        <li>Hakkınızda tuttuğumuz tüm kişisel verilerin bir kopyasını talep edebilirsiniz</li>
-        <li>Verilerinizin nasıl işlendiği hakkında bilgi alabilirsiniz</li>
-      </ul>
-
-      <h3>8.2 Düzeltme Hakkı</h3>
-      <ul>
-        <li>Yanlış veya eksik kişisel verileri düzeltebilirsiniz</li>
-        <li>Profil bilgilerinizi Uygulama ayarları üzerinden güncelleyebilirsiniz</li>
-      </ul>
-
-      <h3>8.3 Silme Hakkı ("Unutulma Hakkı")</h3>
-      <ul>
-        <li>Kişisel verilerinizin silinmesini talep edebilirsiniz</li>
-        <li>Uygulama ayarları üzerinden hesabınızı silebilirsiniz (Bölüm 11'e bakın)</li>
-      </ul>
-
-      <h3>8.4 İşleme İtiraz Etme Hakkı</h3>
-      <ul>
-        <li>Belirli durumlarda verilerinizin nasıl kullanıldığını sınırlamamızı talep edebilirsiniz</li>
-      </ul>
-
-      <h3>8.5 Veri Taşınabilirliği Hakkı</h3>
-      <ul>
-        <li>Verilerinizi yapılandırılmış, yaygın kullanılan bir formatta alabilirsiniz</li>
-        <li>Verilerinizi başka bir hizmet sağlayıcıya aktarabilirsiniz</li>
-      </ul>
-
-      <h3>8.6 İtiraz Hakkı</h3>
-      <ul>
-        <li>Meşru menfaatlere dayalı işlemeye itiraz edebilirsiniz</li>
-        <li>Cihaz ayarları üzerinden kişiselleştirilmiş reklamlardan çıkabilirsiniz</li>
-      </ul>
-
-      <h3>8.7 Rıza Geri Çekme Hakkı</h3>
-      <ul>
-        <li>İsteğe bağlı veri işleme için rızanızı istediğiniz zaman geri çekebilirsiniz</li>
-        <li>Not: Geri çekme Uygulama işlevselliğini etkileyebilir</li>
-      </ul>
-
-      <h3>8.8 Şikayet Hakkı</h3>
-      <p>Yerel veri koruma otoritenize şikayet başvurusu yapabilirsiniz:</p>
-      <ul>
-        <li><strong>AB:</strong> Ülkenizin veri koruma otoritesi</li>
-        <li><strong>Türkiye:</strong> Kişisel Verileri Koruma Kurumu (KVKK) - <a href="https://www.kvkk.gov.tr">https://www.kvkk.gov.tr</a></li>
-        <li><strong>İngiltere:</strong> Bilgi Komiserliği Ofisi (ICO)</li>
-      </ul>
-
-      <h3>8.9 Haklarınızı Nasıl Kullanırsınız</h3>
-      <ul>
-        <li><strong>Uygulama Üzerinden:</strong> Hesabınızı güncellemek veya silmek için ayarlar menüsünü kullanın</li>
-        <li><strong>E-posta ile:</strong> <a href="mailto:esrefsaatiapp@gmail.com">esrefsaatiapp@gmail.com</a> adresine başvurun</li>
-        <li><strong>Yanıt Süresi:</strong> 30 gün içinde (veya yerel yasa gereği) yanıt vereceğiz</li>
-      </ul>
-
-      <h3>8.10 KVKK Özel Haklar</h3>
-      <p>6698 sayılı Kanun uyarınca:</p>
-      <ul>
-        <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme</li>
-        <li>İşlenmişse buna ilişkin bilgi talep etme</li>
-        <li>İşlenme amacını ve bunların amacına uygun kullanılıp kullanılmadığını öğrenme</li>
-        <li>Yurt içinde veya yurt dışında aktarıldığı üçüncü kişileri bilme</li>
-        <li>Eksik veya yanlış işlenmişse düzeltilmesini isteme</li>
-        <li>Kanunda öngörülen şartlar çerçevesinde silinmesini veya yok edilmesini isteme</li>
-        <li>Aktarıldığı üçüncü kişilere yukarıdaki işlemlerin bildirilmesini isteme</li>
-        <li>Münhasıran otomatik sistemler ile analiz edilmesi nedeniyle aleyhinize bir sonucun ortaya çıkmasına itiraz etme</li>
-        <li>Kanuna aykırı olarak işlenmesi sebebiyle zarara uğramanız hâlinde zararın giderilmesini talep etme</li>
-      </ul>
-
-      <h2>9. GÜVENLİK ÖNLEMLERİ</h2>
-      <p>Kişisel verilerinizi korumak için teknik ve idari önlemler uyguluyoruz:</p>
-
-      <h3>9.1 Teknik Güvenlik</h3>
-      <ul>
-        <li><strong>Şifreleme:</strong> Şifreler Firebase Authentication'ın güvenli hash kullanımıyla şifrelenir</li>
-        <li><strong>HTTPS:</strong> Tüm veri iletimi şifreli HTTPS bağlantıları kullanır</li>
-        <li><strong>Firebase Güvenlik Kuralları:</strong> Veritabanı erişimi yalnızca kimlik doğrulanmış kullanıcılarla sınırlıdır</li>
-        <li><strong>Güvenli Depolama:</strong> Veriler endüstri standardı güvenlikle Google Cloud Platform'da saklanır</li>
-      </ul>
-
-      <h3>9.2 İdari Güvenlik</h3>
-      <ul>
-        <li><strong>Erişim Kontrolleri:</strong> Kişisel verilere erişim ihtiyaç temelinde sınırlıdır</li>
-        <li><strong>Düzenli Denetimler:</strong> Periyodik güvenlik incelemeleri ve güncellemeler</li>
-        <li><strong>Personel Eğitimi:</strong> Veri koruma uygulamaları konusunda eğitilmiş personel</li>
-      </ul>
-
-      <h3>9.3 Güvenlik Sınırlamaları</h3>
-      <ul>
-        <li>Hiçbir sistem %100 güvenli değildir</li>
-        <li>Hesap kimlik bilgilerinizin güvenliğini korumaktan siz sorumlusunuz</li>
-        <li>Güvenlik endişelerini derhal <a href="mailto:esrefsaatiapp@gmail.com">esrefsaatiapp@gmail.com</a> adresine bildirin</li>
-      </ul>
-
-      <h2>10. ÇOCUKLARIN GİZLİLİĞİ</h2>
-      <h3>10.1 Yaş Gereksinimi</h3>
-      <ul>
-        <li>Uygulama 13 yaşın altındaki çocuklar için tasarlanmamıştır</li>
-        <li>13 yaşın altındaki çocuklardan bilerek kişisel veri toplamıyoruz</li>
-        <li>13 yaşın altındaysanız, lütfen Uygulamayı kullanmayın</li>
-      </ul>
-
-      <h3>10.2 Ebeveyn Onayı</h3>
-      <ul>
-        <li>13-18 yaş arasındaysanız (veya yargı yetkinizdeki reşit olma yaşı), Uygulamayı kullanmak için ebeveyn iznine sahip olmalısınız</li>
-        <li>Ebeveynler veya vasiler, çocuklarının verilerinin silinmesini talep edebilir</li>
-      </ul>
-
-      <h3>10.3 Bildirim</h3>
-      <ul>
-        <li>13 yaşın altındaki bir çocuktan veri topladığımıza inanıyorsanız, derhal <a href="mailto:esrefsaatiapp@gmail.com">esrefsaatiapp@gmail.com</a> adresine iletişime geçin</li>
-      </ul>
-
-      <h2>11. HESAP SİLME (GOOGLE PLAY YENİ KURALI)</h2>
-      <h3>11.1 Hesabınızı Nasıl Silersiniz</h3>
-      <p>Hesabınızı ve ilişkili verileri aşağıdaki yöntemlerle silebilirsiniz:</p>
-      
-      <p><strong>Yöntem 1: Uygulama Üzerinden</strong></p>
-      <ul>
-        <li>Uygulamayı açın</li>
-        <li>Ayarlar'a gidin</li>
-        <li>"Hesabı Sil" veya "Hesap Silme" seçeneğini seçin</li>
-        <li>Silmeyi onaylayın</li>
-      </ul>
-
-      <p><strong>Yöntem 2: E-posta ile</strong></p>
-      <ul>
-        <li><a href="mailto:esrefsaatiapp@gmail.com">esrefsaatiapp@gmail.com</a> adresine bir silme talebi gönderin</li>
-        <li>Doğrulama için hesap e-posta adresinizi ekleyin</li>
-      </ul>
-
-      <h3>11.2 Ne Silinir</h3>
-      <p>Hesap silme üzerine, aşağıdaki veriler silinir:</p>
-      <ul>
-        <li>Kullanıcı profiliniz ve tüm kişisel bilgileriniz</li>
-        <li>Geri sayım verileriniz</li>
-        <li>Hesap kimlik doğrulama bilgileriniz</li>
-      </ul>
-
-      <h3>11.3 Ne Saklanabilir</h3>
-      <p>Aşağıdaki veriler yasal veya iş amaçları için saklanabilir:</p>
-      <ul>
-        <li>Satın alma işlem kayıtları (vergi/yasal uyumluluk için): 7 yıla kadar</li>
-        <li>Toplu, anonimleştirilmiş analitik veriler</li>
-        <li>Yasal anlaşmazlıkları çözmek için gerekli veriler</li>
-      </ul>
-
-      <h3>11.4 Silme Zaman Çizelgesi</h3>
-      <ul>
-        <li>Hesap silme, talebinizden itibaren 30 gün içinde işlenir</li>
-        <li>Silme tamamlandığında onay alacaksınız</li>
-        <li>Bazı veriler kalıcı silmeden önce yedeklerde 90 güne kadar saklanabilir</li>
-      </ul>
-
-      <h3>11.5 Üçüncü Taraf Verileri</h3>
-      <ul>
-        <li>Üçüncü taraf hizmetlerinde (Google) saklanan veriler, politikalarına göre silinecektir</li>
-        <li>Sistemlerinden tamamen silinmesi için doğrudan Google ile iletişime geçmeniz gerekebilir</li>
-      </ul>
-
-      <h2>12. ÇEREZLER VE İZLEME TEKNOLOJİLERİ</h2>
-      <h3>12.1 Kullanılan Teknolojiler</h3>
-      <ul>
-        <li><strong>Firebase Analytics:</strong> Uygulama kullanımını izlemek için çerezler ve benzer teknolojiler kullanır</li>
-        <li><strong>AdMob:</strong> Reklam tanımlayıcıları ve izleme teknolojileri kullanır</li>
-        <li><strong>Yerel Depolama:</strong> Tercihleri ve ayarları cihazınızda saklar</li>
-      </ul>
-
-      <h3>12.2 İzlemeyi Yönetme</h3>
-      <ul>
-        <li>Cihazınızın reklam ayarları üzerinden kişiselleştirilmiş reklamlardan çıkabilirsiniz</li>
-        <li>Analitik veri toplama otomatiktir ancak cihaz ayarları üzerinden sınırlandırılabilir</li>
-        <li>İzlemeyi devre dışı bırakmak Uygulama işlevselliğini etkileyebilir</li>
-      </ul>
-
-      <h2>13. BU GİZLİLİK POLİTİKASINDAKİ DEĞİŞİKLİKLER</h2>
-      <h3>13.1 Güncellemeler</h3>
-      <ul>
-        <li>Bu Gizlilik Politikasını zaman zaman güncelleyebiliriz</li>
-        <li>Önemli değişiklikler Uygulama veya e-posta yoluyla bildirilecektir</li>
-        <li>Üstteki "Son Güncelleme" tarihi değişikliklerin yapıldığı zamanı gösterir</li>
-      </ul>
-
-      <h3>13.2 Kullanıma Devam</h3>
-      <ul>
-        <li>Değişikliklerden sonra Uygulamayı kullanmaya devam etmeniz kabul anlamına gelir</li>
-        <li>Değişikliklerle aynı fikirde değilseniz, Uygulamayı kullanmayı bırakmalı ve hesabınızı silmelisiniz</li>
-      </ul>
-
-      <h2>14. İLETİŞİM BİLGİLERİ</h2>
-      <p>Kişisel verilerinizle ilgili sorular, endişeler veya haklarınızı kullanmak için:</p>
-
-      <div class="dev-box">
-        <h3>VERİ SORUMLUSU</h3>
-        <p><strong>Ad Soyad:</strong> Ömer Eyibardakçı</p>
-        <p><strong>Adres:</strong> Gaziantep / Türkiye</p>
-        <p><strong>E-posta:</strong> <a href="mailto:esrefsaatiapp@gmail.com">esrefsaatiapp@gmail.com</a></p>
-      </div>
-
-      <div class="dev-box" style="margin-top:20px; border-color: #333;">
-        <h3>KVKK BAŞVURU HAKKI</h3>
-        <p>Kişisel verilerinizin korunması ile ilgili şikayetleriniz için:</p>
-        <p><strong>KVKK İletişim:</strong> <a href="https://www.kvkk.gov.tr">https://www.kvkk.gov.tr</a></p>
-        <p><strong>KVKK Adres:</strong> Nasuh Akar Mah. 1407. Sok. No:4 06520 Balgat/Çankaya/Ankara</p>
-        <p><strong>KVKK Telefon:</strong> 0312 216 50 00</p>
-      </div>
-
-      <h2>15. EK BİLGİLER</h2>
-      <h3>15.1 Üçüncü Taraf Bağlantıları</h3>
-      <ul>
-        <li>Uygulama üçüncü taraf web sitelerine veya hizmetlere bağlantılar içerebilir</li>
-        <li>Üçüncü tarafların gizlilik uygulamalarından sorumlu değiliz</li>
-        <li>Bilgi vermeden önce üçüncü taraf gizlilik politikalarını inceleyin</li>
-      </ul>
-
-      <h3>15.2 KVKK Özel Bilgiler</h3>
-      <ul>
-        <li>Türk kullanıcılar, 6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında haklara sahiptir</li>
-        <li>Bu Aydınlatma Metni, Türkiye'ye özel bilgileri içerir</li>
-        <li>KVKK kapsamındaki tüm haklarınızı kullanabilirsiniz</li>
-      </ul>
-
-    </main>
-
-    <footer>
-      © 2026 Eşref Saati — Tüm hakları saklıdır. &nbsp;|&nbsp; Geliştirici: Ömer Eyibardakçı
-    </footer>
-  </div>
+<div class="container">
+
+<header>
+  <h1>KVKK AYDINLATMA METNİ<br>
+    <span style="font-size:.7em;color:#fff;text-shadow:none;">(GİZLİLİK POLİTİKASI)</span>
+  </h1>
+  <p class="meta"><strong>Son Güncelleme:</strong> 16.01.2026</p>
+</header>
+
+<main>
+
+<h2>1. VERİ SORUMLUSU</h2>
+<p>
+<strong>Eşref Saati</strong> uygulaması, <strong>Ömer Eyibardakçı</strong> tarafından
+işletilmektedir (Gaziantep / Türkiye).
+</p>
+<p>
+<strong>İletişim:</strong><br>
+<a href="mailto:esrefsaatiapp@gmail.com">esrefsaatiapp@gmail.com</a>
+</p>
+
+<h2>2. TOPLANAN VERİLER</h2>
+
+<h3>2.1 Hesap ve Kimlik Verileri</h3>
+<ul>
+  <li>Ad – Soyad</li>
+  <li>E-posta adresi</li>
+  <li>Firebase Authentication ile şifrelenmiş kimlik bilgileri</li>
+  <li>Yaş ve cinsiyet (demografik analiz amaçlı)</li>
+</ul>
+
+<h3>2.2 Platforma ve Sürüme Bağlı Özel Veriler (İsteğe Bağlı)</h3>
+<p>
+Bu bölümde yer alan veriler, <strong>yalnızca ilgili platformda özellik olarak
+sunuluyorsa</strong> ve <strong>kullanıcının açık rızası varsa</strong> işlenir.
+</p>
+
+<ul>
+  <li>
+    <strong>Astrolojik Profil Verileri:</strong>
+    Burç, yükselen, doğum saati, doğum yeri, element bilgisi.
+    <br><em>Not: Bu veriler iOS (Apple App Store) sürümünde toplanmamaktadır.</em>
+  </li>
+  <li>
+    <strong>Sosyal Bilgiler:</strong>
+    İlişki durumu (yalnızca desteklenen sürümlerde).
+  </li>
+</ul>
+
+<h3>2.3 Uygulama Kullanım Verileri</h3>
+<ul>
+  <li>Geri sayım bitiş zamanı (Unix timestamp)</li>
+  <li>Oluşturma ve senkronizasyon zamanları</li>
+</ul>
+
+<h3>2.4 Satın Alma Verileri</h3>
+<ul>
+  <li>Apple App Store veya Google Play üzerinden yapılan satın alma kayıtları</li>
+  <li>Sipariş kimliği ve işlem zamanı</li>
+</ul>
+
+<h3>2.5 Cihaz ve Teknik Veriler</h3>
+<ul>
+  <li>Cihaz modeli, işletim sistemi</li>
+  <li>IP adresi</li>
+  <li>Firebase Analytics ve Google AdMob tanımlayıcıları</li>
+</ul>
+
+<h2>3. VERİLERİN İŞLENME AMAÇLARI</h2>
+<ul>
+  <li>Hizmet sunumu ve hesap yönetimi</li>
+  <li>Uygulama performansının iyileştirilmesi</li>
+  <li>Yasal yükümlülüklerin yerine getirilmesi</li>
+  <li>Reklam gösterimi (Google AdMob)</li>
+</ul>
+
+<h2>4. VERİ PAYLAŞIMI</h2>
+<ul>
+  <li>Google Firebase (kimlik doğrulama ve veri saklama)</li>
+  <li>Google AdMob (reklam)</li>
+  <li>Apple App Store & Google Play (ödeme işlemleri)</li>
+</ul>
+
+<h2>5. YURT DIŞINA VERİ AKTARIMI</h2>
+<p>
+Veriler, Google Cloud altyapısı nedeniyle ABD ve AB merkezli sunucularda
+işlenebilir. Bu aktarım, platformdan bağımsızdır.
+</p>
+
+<h2>6. KULLANICI HAKLARI (KVKK & GDPR)</h2>
+<p>
+Kullanıcılar; erişim, düzeltme, silme (unutulma hakkı), veri taşınabilirliği
+ve itiraz haklarına sahiptir.
+</p>
+
+<h2>7. HESAP VE VERİ SİLME</h2>
+<ul>
+  <li>Uygulama içinden: Ayarlar → Hesabı Sil</li>
+  <li>E-posta ile: <a href="mailto:esrefsaatiapp@gmail.com">esrefsaatiapp@gmail.com</a></li>
+</ul>
+<p><em>Tüm veriler anında silinir ama olası bir durumda en geç 30 gün içinde kalıcı olarak silinir.</em></p>
+
+<h2>8. ÇOCUKLARIN GİZLİLİĞİ</h2>
+<p>
+Uygulama 13 yaş altı çocuklara yönelik değildir.
+</p>
+
+<div class="dev-box">
+  <h3>İLETİŞİM</h3>
+  <p><strong>Veri Sorumlusu:</strong> Ömer Eyibardakçı</p>
+  <p><strong>E-posta:</strong> esrefsaatiapp@gmail.com</p>
+  <p><strong>Adres:</strong> Gaziantep / Türkiye</p>
+</div>
+
+</main>
+
+<footer>
+© 2026 Eşref Saati — Tüm hakları saklıdır
+</footer>
+
+</div>
 </body>
 </html>
