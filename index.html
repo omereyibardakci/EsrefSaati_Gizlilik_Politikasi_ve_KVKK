@@ -109,7 +109,7 @@
   <h1>KVKK AYDINLATMA METNİ<br>
     <span style="font-size:.7em;color:#fff;text-shadow:none;">(GİZLİLİK POLİTİKASI)</span>
   </h1>
-  <p class="meta"><strong>Son Güncelleme:</strong> 16.01.2026</p>
+  <p class="meta"><strong>Son Güncelleme:</strong> 03.02.2026</p>
 </header>
 
 <main>
@@ -120,7 +120,8 @@
 işletilmektedir (Gaziantep / Türkiye).
 </p>
 <p>
-<strong>İletişim:</strong><br><a href="mailto:esrefsaatiapp@gmail.com">esrefsaatiapp@gmail.com</a>
+<strong>İletişim:</strong><br>
+<a href="mailto:esrefsaatiapp@gmail.com">esrefsaatiapp@gmail.com</a>
 </p>
 
 <h2>2. TOPLANAN VERİLER</h2>
@@ -129,84 +130,65 @@ işletilmektedir (Gaziantep / Türkiye).
 <ul>
   <li>Ad – Soyad</li>
   <li>E-posta adresi</li>
-  <li>Firebase Authentication ile şifrelenmiş kimlik bilgileri</li>
-  <li>Yaş ve cinsiyet (demografik analiz amaçlı)</li>
+  <li>Firebase Authentication üzerinden oluşturulan kullanıcı kimliği (User ID)</li>
 </ul>
 
-<h3>2.2 Platforma ve Sürüme Bağlı Özel Veriler (İsteğe Bağlı)</h3>
-<p>
-Bu bölümde yer alan veriler, <strong>yalnızca ilgili platformda özellik olarak
-sunuluyorsa</strong> ve <strong>kullanıcının açık rızası varsa</strong> işlenir.
-</p>
-
+<h3>2.2 Profil Kişiselleştirme Verileri (Opsiyonel)</h3>
+<p>Kullanıcı deneyimini kişiselleştirmek amacıyla aşağıdaki veriler işlenebilir:</p>
 <ul>
-  <li>
-    <strong>Astrolojik Profil Verileri:</strong>
-    Burç, yükselen, doğum saati, doğum yeri, element bilgisi.
-    <br><em>Not: Bu veriler iOS (Apple App Store) sürümünde toplanmamaktadır.</em>
-  </li>
-  <li>
-    <strong>Sosyal Bilgiler:</strong>
-    İlişki durumu (yalnızca desteklenen sürümlerde).
-  </li>
+  <li><strong>Referans Tarih/Saat:</strong> Kullanıcının profil kalibrasyonu için girdiği tarih bilgisi.</li>
+  <li><strong>Görsel Referans Kategorisi:</strong> Kullanıcının seçtiği simge veya görsel tema (Icon).</li>
+  <li><strong>Cinsiyet:</strong> Kullanıcıya hitap şeklini belirlemek için (varsa).</li>
+</ul>
+<p><em>Not: Bu veriler yalnızca profilin görsel olarak özelleştirilmesi amacıyla kullanılır. Herhangi bir astrolojik tahmin, fal veya gelecek analizi amacıyla <strong>kullanılmaz</strong>.</em></p>
+
+<h3>2.3 Uygulama İçi Kullanıcı İçeriği</h3>
+<ul>
+  <li>Kullanıcı tarafından oluşturulan geri sayım kayıtları</li>
+  <li>Kullanıcı tarafından eklenen kişisel niyetler ve hedefler (Goals)</li>
 </ul>
 
-<h3>2.3 Uygulama Kullanım Verileri</h3>
+<h3>2.4 Cihaz ve Teknik Veriler</h3>
 <ul>
-  <li>Geri sayım bitiş zamanı (Unix timestamp)</li>
-  <li>Oluşturma ve senkronizasyon zamanları</li>
-</ul>
-
-<h3>2.4 Satın Alma Verileri</h3>
-<ul>
-  <li>Apple App Store veya Google Play üzerinden yapılan satın alma kayıtları</li>
-  <li>Sipariş kimliği ve işlem zamanı</li>
-</ul>
-
-<h3>2.5 Cihaz ve Teknik Veriler</h3>
-<ul>
-  <li>Cihaz modeli, işletim sistemi</li>
-  <li>IP adresi</li>
-  <li>Firebase Analytics ve Google AdMob tanımlayıcıları</li>
+  <li>Cihaz modeli, işletim sistemi sürümü ve genel kullanım istatistikleri</li>
+  <li>Uygulamanın çalışması için gerekli teknik kayıtlar</li>
 </ul>
 
 <h2>3. VERİLERİN İŞLENME AMAÇLARI</h2>
 <ul>
   <li>Hizmet sunumu ve hesap yönetimi</li>
+  <li><strong>Kullanıcı profilinin kişiselleştirilmesi ve görsel tema oluşturulması</strong></li>
   <li>Uygulama performansının iyileştirilmesi</li>
   <li>Yasal yükümlülüklerin yerine getirilmesi</li>
-  <li>Reklam gösterimi (Google AdMob)</li>
 </ul>
 
 <h2>4. VERİ PAYLAŞIMI</h2>
 <ul>
-  <li>Google Firebase (kimlik doğrulama ve veri saklama)</li>
-  <li>Google AdMob (reklam)</li>
-  <li>Apple App Store & Google Play (ödeme işlemleri)</li>
+  <li><strong>Google Firebase:</strong> Verilerin güvenli saklanması ve kimlik doğrulama işlemleri için.</li>
+  <li><strong>Apple App Store:</strong> Ödeme ve abonelik işlemleri için.</li>
+  <li><em>Kullanıcı verileri üçüncü taraf reklam şirketleriyle veya veri simsarlarıyla paylaşılmaz.</em></li>
 </ul>
 
 <h2>5. YURT DIŞINA VERİ AKTARIMI</h2>
 <p>
-Veriler, Google Cloud altyapısı nedeniyle ABD ve AB merkezli sunucularda
-işlenebilir. Bu aktarım, platformdan bağımsızdır.
+Veriler, Google Firebase altyapısı kullanıldığı için güvenli bulut sunucularında (yurt dışı) saklanabilir. Bu işlem, hizmetin teknik sürekliliği için zorunludur.
 </p>
 
-<h2>6. KULLANICI HAKLARI (KVKK & GDPR)</h2>
+<h2>6. KULLANICI HAKLARI</h2>
 <p>
-Kullanıcılar; erişim, düzeltme, silme (unutulma hakkı), veri taşınabilirliği
-ve itiraz haklarına sahiptir.
+Kullanıcılar; verilerine erişme, düzeltme, silme (unutulma hakkı) ve verilerinin işlenmesine itiraz etme hakkına sahiptir.
 </p>
 
 <h2>7. HESAP VE VERİ SİLME</h2>
 <ul>
-  <li>Uygulama içinden: Ayarlar → Hesabı Sil</li>
-  <li>E-posta ile: <a href="mailto:esrefsaatiapp@gmail.com">esrefsaatiapp@gmail.com</a></li>
+  <li>Uygulama içinden: <strong>Ayarlar → Hesabı Sil</strong></li>
+  <li>E-posta ile talep: <a href="mailto:esrefsaatiapp@gmail.com">esrefsaatiapp@gmail.com</a></li>
 </ul>
-<p><em>Tüm veriler anında silinir ama olası bir durumda en geç 30 gün içinde kalıcı olarak silinir.</em></p>
+<p><em>Hesabın silinmesiyle birlikte, kullanıcıya ait tüm kişisel veriler ve hedefler kalıcı olarak silinir. Geri döndürülemez.</em></p>
 
 <h2>8. ÇOCUKLARIN GİZLİLİĞİ</h2>
 <p>
-Uygulama 13 yaş altı çocuklara yönelik değildir.
+Uygulama genel izleyici kitlesine yöneliktir ancak 13 yaş altı çocuklardan bilerek veri toplamaz.
 </p>
 
 <div class="dev-box">
